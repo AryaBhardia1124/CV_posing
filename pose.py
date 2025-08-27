@@ -20,4 +20,8 @@ while True:
             cv2.circle(img, (cx, cy), 10, (255, 0, 0), cv2.FILLED)
     
     cv2.imshow("Image", img)
-    cv2.waitKey(1)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+cap.release()
+cv2.destroyAllWindows()
